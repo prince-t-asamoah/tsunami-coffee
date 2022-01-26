@@ -1,0 +1,199 @@
+html,
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  background-color: white;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.main {
+  height: 30rem;
+  padding-top: 1rem;
+  background-image: url("https://content.codecademy.com/courses/freelance-1/unit-5/tsunami-coffee/images/bg-photo.png");
+}
+
+.main img {
+  width: 15rem;
+  display: block;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+nav {
+  background-color: OrangeRed;
+  color: White;
+  padding: 0.75rem 1.25rem;
+}
+
+ul {
+  list-style: none;
+  /* width: 50%; */
+  margin: 0;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+}
+
+li a {
+  color: white;
+  letter-spacing: 0.5rem;
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+li a:hover {
+  color: orange;
+}
+
+.supporting,
+.rating,
+.gallery,
+.location {
+  margin: 4em auto;
+}
+
+.supporting {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 1rem;
+}
+
+.supporting img {
+  width: 10%;
+  height: 10%;
+  margin-right: 5%;
+}
+
+.rating {
+  background-color: OrangeRed;
+  height: 20rem;
+  padding: 0 1rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating h1 {
+  font-size: 2.5rem;
+}
+
+.gallery img {
+  display: block;
+  width: 30%;
+  margin: 1.5%;
+  float: left;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.location {
+  text-align: center;
+  margin-bottom: 7rem;
+}
+
+.location img {
+  width: 100%;
+}
+
+footer {
+  background-color: OrangeRed;
+  padding: 0 1rem;
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5em 0;
+  color: white;
+}
+
+/*Large screens */
+@media only screen and (max-width: 1024px /*Original max width is 960px*/) {
+  .main {
+    padding-top: 0;
+  }
+  .supporting {
+    padding: 5%;
+  }
+  .copyright {
+    margin-left: 5%;
+  }
+}
+/*Medium size screens*/
+@media only screen and (max-width: 768px /*Original max width is 700px*/) {
+  .supporting {
+    margin: 0;
+  }
+  .supporting img {
+    display: none;
+  }
+  .rating {
+    margin-top: 0;
+    /* padding: 5%; */
+  }
+  .rating h1,
+  .rating p {
+    margin-left: 5%;
+  }
+  footer .container {
+    flex-direction: column-reverse;
+  }
+  .copyright {
+    margin-top: 5%;
+  }
+}
+/*Small screens*/
+@media only screen and (max-width: 425px /*Original max width is 470px*/) {
+  nav ul {
+    text-align: center;
+    padding-left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    padding: 0.55rem 0;
+  }
+  nav ul span {
+    display: none;
+  }
+  .supporting {
+    padding: 10%;
+  }
+  .rating {
+    margin-bottom: 0;
+    padding-bottom: 5%;
+  }
+  .rating h1 {
+    font-size: 2rem;
+  }
+  .gallery,
+  .location,
+  .copyright {
+    margin: 0;
+  }
+  .gallery img {
+    width: 100%;
+    margin: 0;
+  }
+  .location h1 {
+    font-size: 1.2rem;
+  }
+  footer .container {
+    padding: 10% 0;
+  }
+  footer nav {
+    display: none;
+  }
+}
